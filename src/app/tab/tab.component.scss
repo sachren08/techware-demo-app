@@ -1,0 +1,38 @@
+.container {
+  max-width: 900px;
+}
+
+.tab-content {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.nav-tabs .nav-link {
+  background-color: rgb(175, 95, 95);
+}
+
+.tab-content {
+  min-height: 700px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+.custom-button {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: red;
+  color: white;
+}
