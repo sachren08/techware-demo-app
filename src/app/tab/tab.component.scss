@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Archivo', sans-serif;
+}
+
+button, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Archivo', sans-serif;
+}
+
 .container {
   max-width: 900px;
 }
@@ -8,15 +18,36 @@
   border-top: none;
 }
 
+.nav-tabs {
+  border-bottom: none;
+}
+
 .nav-tabs .nav-link {
-  background-color: rgb(175, 95, 95);
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+  border-color: black;
+  border-radius: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #3A86FF;
+  color: white;
+  border-color: #3A86FF;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: white;
+  color: black;
+  border-color: #3A86FF;
 }
 
 .tab-content {
   min-height: 700px;
   padding: 20px;
   border: 1px solid #dee2e6;
-  border-radius: 5px;
+  border-radius: 15px;
   width: 100%;
   background-color: #f8f9fa;
 }
@@ -36,3 +67,12 @@
   background-color: red;
   color: white;
 }
+
+h1.triple-benefits {
+  color: #361863;
+}
+
+p {
+  color: #361863; 
+}
+
