@@ -10,9 +10,9 @@ import { interval, Subscription } from 'rxjs';
 export class TabComponent implements OnInit, OnDestroy {
   activeTabIndex = 0;
   tabCount = 3;
-  subscription: Subscription = new Subscription();
+  private subscription: Subscription = new Subscription();
 
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -20,7 +20,7 @@ export class TabComponent implements OnInit, OnDestroy {
     }
   }
 
-  startAutoSwitching() {
+  private startAutoSwitching(): void {
     const tabSwitching$ = interval(5000);
     this.subscription.add(
       tabSwitching$.subscribe(() => {
@@ -30,8 +30,6 @@ export class TabComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.subscription) {
       this.subscription.unsubscribe();
-    }
   }
 }

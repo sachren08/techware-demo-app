@@ -1,59 +1,71 @@
-<div class="d-flex justify-content-center mt-5">
+<section class="text-center mt-5">
   <button class="custom-button">EMPOWER EVERY ROLE</button>
-</div>
-<div class="d-flex justify-content-center mt-3">
+</section>
+
+<section class="text-center mt-3">
   <h1>Triple The Benefits!</h1>
-</div>
-<div class="d-flex justify-content-center mt-3 timer-display">
+</section>
+
+<section class="text-center mt-3 timer-display">
   <app-timer></app-timer>
-</div>
-<div class="container mt-5">
-  <div class="d-flex justify-content-between">
+</section>
+
+<section class="container mt-5">
+  <nav aria-label="Tab navigation">
     <ul
       class="nav nav-tabs"
+      role="tablist"
       style="flex-grow: 1; justify-content: space-between"
     >
-      <li class="nav-item" role="presentation">
+      <li class="nav-item">
         <button
           class="nav-link"
           [class.active]="activeTabIndex === 0"
           (click)="activeTabIndex = 0"
           type="button"
           role="tab"
+          aria-selected="activeTabIndex === 0"
+          aria-controls="hr-tab"
         >
           For HR Managers
         </button>
       </li>
-      <li class="nav-item" role="presentation">
+      <li class="nav-item">
         <button
           class="nav-link"
           [class.active]="activeTabIndex === 1"
           (click)="activeTabIndex = 1"
           type="button"
           role="tab"
+          aria-selected="activeTabIndex === 1"
+          aria-controls="line-managers-tab"
         >
           For Line Managers
         </button>
       </li>
-      <li class="nav-item" role="presentation">
+      <li class="nav-item">
         <button
           class="nav-link"
           [class.active]="activeTabIndex === 2"
           (click)="activeTabIndex = 2"
           type="button"
           role="tab"
+          aria-selected="activeTabIndex === 2"
+          aria-controls="employees-tab"
         >
           For Employees
         </button>
       </li>
     </ul>
-  </div>
+  </nav>
 
-  <div class="tab-content mt-3">
-    <div
+  <section class="tab-content mt-3">
+    <article
       *ngIf="activeTabIndex === 0"
+      id="hr-tab"
       class="tab-pane fade show active"
       role="tabpanel"
+      aria-labelledby="hr-tab"
     >
       <h3>For HR Managers</h3>
       <p>
@@ -97,8 +109,15 @@
         during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
         dolor sit amet..", comes from a line in section 1.10.32.
       </p>
-    </div>
-    <div *ngIf="activeTabIndex === 1" class="tab-pane fade show active" role="tabpanel">
+    </article>
+
+    <article
+      *ngIf="activeTabIndex === 1"
+      id="line-managers-tab"
+      class="tab-pane fade show active"
+      role="tabpanel"
+      aria-labelledby="line-managers-tab"
+    >
       <h3>For Line Managers</h3>
       <p>
         There are many variations of passages of Lorem Ipsum available, but the
@@ -145,8 +164,15 @@
         which looks reasonable. The generated Lorem Ipsum is therefore always
         free from repetition, injected humour, or non-characteristic words etc..
       </p>
-    </div>
-    <div *ngIf="activeTabIndex === 2" class="tab-pane fade show active" role="tabpanel">
+    </article>
+
+    <article
+      *ngIf="activeTabIndex === 2"
+      id="employees-tab"
+      class="tab-pane fade show active"
+      role="tabpanel"
+      aria-labelledby="employees-tab"
+    >
       <h3>For Employees</h3>
       <p>
         It is a long established fact that a reader will be distracted by the
@@ -186,7 +212,6 @@
         sometimes by accident, sometimes on purpose (injected humour and the
         like).
       </p>
-    </div>
-  </div>
-</div>
-
+    </article>
+  </section>
+</section>
