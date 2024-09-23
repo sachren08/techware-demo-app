@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+Technologies Used
+TypeScript: Version 5.5.2
+Node.js: Version 18.20.2
+Angular CLI: Version 18.2.4
+Bootstrap: Version 5.3.3
